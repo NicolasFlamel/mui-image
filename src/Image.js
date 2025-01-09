@@ -28,25 +28,25 @@ const Img = styled('img')({
 export default function Image(props) {
 	const {
 		src,
-		alt,
-		height,
-		width,
-		position,
-		fit,
+		alt = imageDefaultProps.alt,
+		height = imageDefaultProps.height,
+		width = imageDefaultProps.width,
+		position = imageDefaultProps.position,
+		fit = imageDefaultProps.fit,
 		style,
-		className,
-		showLoading,
-		errorIcon,
-		shift,
-		distance,
-		shiftDuration,
-		bgColor,
+		className = imageDefaultProps.className,
+		showLoading = imageDefaultProps.showLoading,
+		errorIcon = imageDefaultProps.errorIcon,
+		shift = imageDefaultProps.shift,
+		distance = imageDefaultProps.distance,
+		shiftDuration = imageDefaultProps.shiftDuration,
+		bgColor = imageDefaultProps.bgColor,
 		wrapperStyle,
 		iconWrapperStyle,
-		wrapperClassName,
-		iconWrapperClassName,
-		duration,
-		easing,
+		wrapperClassName = imageDefaultProps.wrapperClassName,
+		iconWrapperClassName = imageDefaultProps.iconWrapperClassName,
+		duration = imageDefaultProps.duration,
+		easing = imageDefaultProps.easing,
 		onLoad: onLoadProp,
 		onError: onErrorProp,
 		...rest
@@ -141,7 +141,7 @@ export default function Image(props) {
 	);
 }
 
-Image.defaultProps = {
+const imageDefaultProps = {
 	alt: '',
 	height: '100%',
 	width: '100%',
